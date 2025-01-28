@@ -23,9 +23,43 @@
 /* #region utilities */
 
 /* layout */
+
+#nav_content {
+    margin: 20px;
+    margin-bottom: 7px;
+}
+
+#music {
+    margin: 22px 35px 22px 20px;
+}
+
+.horizontal_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-wrap: nowrap;
+
+    li {
+        padding: 0px 12px;
+        line-height: 36px;
+    }
+}
+
 /* /layout */
 
 /* text format */
+ul {
+    list-style-type: none;
+}
+
+.highlight {
+    background-color: var(--sporify-highlight);
+}
+
+.highlight_text {
+    color: var(--spotify-text-light);
+}
+
 /* /text format */
 
 /* buttons */
@@ -58,10 +92,10 @@ header {
 /* /header */
 
 main {
-    margin: 90px 0 90px 230px;
+    padding: 90px 0 90px 230px;
     overflow-y: auto;
     background-color: var(--spotify-bg-main);
-    height: 100vh;
+    height: 90vh;
 
     #nav_bar {
         z-index: 200;
@@ -71,7 +105,10 @@ main {
         left: 0;
         top: 0;
         height: 100%;
+        margin-bottom: 90px;
     }
+
+    .horizontal_list {}
 }
 
 /* /main */
