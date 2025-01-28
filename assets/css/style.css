@@ -1,0 +1,28 @@
+/* #region common */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --spotify-bg-header: #080b12;
+    --spotify-bg-navbar: #000000;
+    --spotify-bg-main: #141922;
+    --spotify-bg-player: #282828;
+    --spotify-text-light: #ffffff;
+    --spotify-text-soft-light: #a3a3a3;
+    --sporify-highlight: #79b229;
+}
+
+/* #endregion common */
+
+/* #region utilities */
+/* #endregion utilities */
+
+/* #region body */
+/* #endregion body */
+
+/* #region media query */
+/* #endregion media query */
