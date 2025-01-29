@@ -20,7 +20,7 @@
     <nav id="nav_bar">
         <div id="nav_content">
             <div class="mobile_only">
-                <img class="mobile_only" src="./assets/img/logo-small.svg" alt="">
+                <img src="./assets/img/logo-small.svg" alt="">
                 <img src="./assets/img/home.svg" alt="">
                 <img src="./assets/img/search.svg" alt="">
                 <img src="./assets/img/libreria.svg" alt="">
@@ -28,9 +28,12 @@
             <div class="no_mobile">
                 <img src="./assets/img/logo.svg" alt="">
                 <div class="nav_buttons main_buttons">
-                    <div><img src="./assets/img/home.svg" alt="Go to your spotify home page"> <span>Home</span></div>
-                    <div><img src="./assets/img/search.svg" alt="Search on Spotify"> <span>Cerca</span> </div>
-                    <div><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La Tua Libreria</span>
+                    <div class="nav_btn"><img src="./assets/img/home.svg" alt="Go to your spotify home page">
+                        <span>Home</span></div>
+                    <div class="nav_btn"><img src="./assets/img/search.svg" alt="Search on Spotify"> <span>Cerca</span>
+                    </div>
+                    <div class="nav_btn"><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La Tua
+                            Libreria</span>
                     </div>
                 </div>
                 <div id="playlists">
@@ -54,13 +57,13 @@
             </div>
             <div id="nav_bottom" class="no_mobile">
                 <div class="nav_buttons">
-                    <div>
+                    <div class="nav_btn">
                         <img id="download_icon" src="./assets/img/download.svg" alt=""> <span>Installa app</span>
                     </div>
                 </div>
                 <hr id="nav_bottom_hr">
                 <div class="nav_buttons">
-                    <div><img id="user_icon" src="./assets/img/profile.svg" alt="">
+                    <div class="nav_btn"><img id="user_icon" src="./assets/img/profile.svg" alt="">
                         <h3>John Doe</h3>
                     </div>
                 </div>
@@ -180,15 +183,15 @@
                         <i class="fa-solid fa-arrow-rotate-right"></i>
                     </div>
                 </div>
-                <div id="length_bar">
+                <div class="length_bar">
                     <p>0:25</p>
                     <!-- <div class="slidecontainer">
                         <input style="accent-color: #ffffff" type="range" min="1" max="100" value="20" class="slider" id="myRange">
                     </div> -->
-                    <div id="fake_slider">
-                        <hr id="playtime">
-                        <div id="fake_thumb_slider"></div>
-                        <hr>
+                    <div class="fake_music_slider">
+                        <hr class="fake_slider_active fake_slider_measures">
+                        <div class="fake_thumb_slider"></div>
+                        <hr class="fake_slider_measures">
                     </div>
                     <p>4:35</p>
                 </div>
@@ -198,6 +201,14 @@
                 <i class="fa-solid fa-list"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-high"></i>
+                <div id="audio_bar"> <!-- class="length_bar" -->
+                    <div class="fake_music_slider">
+                        <hr class="fake_slider_active fake_slider_measures">
+                        <div class="fake_thumb_slider"></div>
+                        <hr class="fake_slider_measures">
+                    </div>
+                </div>
+
             </div>
             <!-- /music player's right side -->
         </div>
