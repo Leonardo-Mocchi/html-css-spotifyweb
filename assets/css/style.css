@@ -20,7 +20,11 @@
 
 #debug {
     main {
-        height: 90vh;
+        height: 200vh;
+    }
+
+    .col_2 {
+        width: calc(100% / 2 -1rem);
     }
 }
 
@@ -117,8 +121,6 @@ ul {
     width: 37px;
     height: 37px;
 
-    object-fit: contain;
-
     span {
         position: relative;
         color: var(--spotify-bg-navbar);
@@ -134,7 +136,7 @@ ul {
 /* #endregion utilities */
 
 /* #region body */
-header {
+/* header {
     z-index: 100;
     background-color: var(--spotify-bg-header);
     height: 90px;
@@ -144,15 +146,25 @@ header {
     display: flex;
     justify-content: end;
     align-items: center;
-}
+} */
 
 /* /header */
 
 main {
-    padding: 90px 0 90px 230px;
+    padding: 0 0 90px 230px;
     overflow-y: auto;
     background-color: var(--spotify-bg-main);
 
+    #upgrade_section {
+        background-color: var(--spotify-bg-header);
+        opacity: 0.75;
+        height: 90px;
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
 
     #nav_bar {
         z-index: 200;
@@ -166,13 +178,11 @@ main {
     }
 
     #playlists {
-        margin-top: 20px;
+        margin-top: 24px;
 
-        /* 24px but reduced for space */
         ul {
             li {
-                margin-bottom: 10px;
-                /* 14px but reduced for space */
+                margin-bottom: 14px;
                 font-size: 13px;
                 font-weight: 500;
             }
@@ -181,8 +191,7 @@ main {
 
     #create_playlist {
         margin-top: 12px;
-        margin-bottom: 16px;
-        /* 24px but reduced for space */
+        margin-bottom: 24px;
         display: flex;
 
         p {
