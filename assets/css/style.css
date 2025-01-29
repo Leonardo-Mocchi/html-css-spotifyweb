@@ -6,6 +6,7 @@
     color: var(--spotify-text-soft-light);
     font-family: "Montserrat", serif;
     font-size: 12px;
+    transition: all 250ms;
 }
 
 :root {
@@ -19,21 +20,34 @@
     --spotify-user-bg: #808080;
 }
 
-#debug {
-
-    .col_2 {
-        width: calc(100% / 2 -1rem);
-    }
-}
-
 /* #endregion common */
+
+/* ############################################## */
 
 /* #region utilities */
 
 /* layout */
 
+.music_row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 30px 0;
+
+    * {
+        text-align: center;
+    }
+}
+
 #music {
-    margin: 22px 35px 22px 20px;
+    margin-left: 22px;
+    margin-right: 35px;
+}
+
+.fyp_section {
+    margin-top: 45px;
+    margin-bottom: 30px;
 }
 
 .horizontal_list {
@@ -41,10 +55,24 @@
     flex-wrap: wrap;
     justify-content: center;
     text-wrap: nowrap;
+    margin-top: 22px;
 
     li {
         padding: 0px 12px;
         line-height: 36px;
+    }
+}
+
+#nav_bottom_hr {
+    margin-bottom: 14px;
+    border: 0.5px solid;
+}
+
+.music_col {
+    width: calc(-1rem + 100% / 6);
+
+    img {
+        max-width: 100%;
     }
 }
 
@@ -54,15 +82,23 @@
 
 h1 {
     color: var(--spotify-text-light);
+    font-size: 24px;
+    font-weight: 700;
 }
 
 h2 {
+    color: var(--spotify-text-light);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h3 {
     color: var(--spotify-text-light);
     font-size: 14px;
     font-weight: 700;
 }
 
-h3 {
+h4 {
     color: var(--spotify-text-light);
     font-weight: 600;
     font-size: 13.5px;
@@ -88,8 +124,9 @@ ul {
     padding: 15px 40px;
     border: 2px solid var(--spotify-text-light);
     border-radius: 5rem;
-    font-weight: 500;
+    font-weight: 700;
     margin-right: 15px;
+    text-align: center;
 }
 
 .nav_buttons {
@@ -146,19 +183,19 @@ ul {
 
 /* #endregion utilities */
 
+/* ############################################## */
+
 /* #region body */
 
 /* nav bar */
 
 #nav_bar {
-    z-index: 200;
     background-color: var(--spotify-bg-navbar);
     width: 230px;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     height: calc(100% - 90px);
-    margin-bottom: 90px;
     overflow-y: auto;
 }
 
@@ -169,6 +206,7 @@ ul {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 #playlists {
@@ -196,18 +234,6 @@ ul {
     }
 }
 
-#nav_bottom {
-    /* position: absolute;
-    bottom: 90px; */
-    justify-self: flex-end;
-
-    hr {
-        margin-bottom: 14px;
-        width: 190px;
-        border: 0.5px solid;
-    }
-}
-
 /* /nav bar */
 
 main {
@@ -228,67 +254,93 @@ main {
         align-items: center;
     }
 
-    /*  #nav_bar {
-        z-index: 200;
-        background-color: var(--spotify-bg-navbar);
-        width: 230px;
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        margin-bottom: 90px;
-        overflow-y: auto;
+    .artist_portrait {
+        border-radius: 100%;
     }
-
-    #playlists {
-        margin-top: 24px;
-
-        ul {
-            li {
-                margin-bottom: 14px;
-                font-size: 13px;
-                font-weight: 500;
-            }
-        }
-    }
-
-    #create_playlist {
-        margin-top: 12px;
-        margin-bottom: 24px;
-        display: flex;
-
-        p {
-            margin-left: 10px;
-            align-self: center;
-            font-size: 14px;
-            font-weight: 600;
-        }
-    }
-
-    #user {
-        img {
-            height: 22px;
-            background-color: var(--spotify-user-bg);
-            padding: 1px 1.5px 2px 1.5px;
-            border-radius: 100%;
-        }
-    } */
 }
 
 /* /main */
 
 footer {
-    z-index: 300;
     background-color: var(--spotify-bg-player);
     height: 90px;
     position: fixed;
     bottom: 0;
     width: 100%;
+
+
 }
 
 /* /footer */
 
 /* #endregion body */
 
+/* ############################################## */
+
 /* #region media query */
+
+@media screen and (min-width: 992px) {
+    .mobile_only {
+        display: none;
+    }
+}
+
+/* /desktop only */
+
+@media screen and (max-width: 992px) {
+    .music_col {
+        width: calc(-1rem + 100% / 4);
+    }
+
+    .mobile_only {
+        display: none;
+    }
+}
+
+/* /tablet &- */
+
+@media screen and (max-width: 768px) {
+    .music_col {
+        width: calc(-1rem + 100% / 2);
+    }
+
+}
+
+/* /big phone &- */
+
+@media screen and (max-width: 600px) {
+
+    .no_mobile {
+        display: none;
+    }
+
+    .mobile_only {
+        display: unset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            height: 28px;
+            width: 28px;
+            margin-top: 15px;
+        }
+    }
+
+    #nav_bar {
+        width: 50px;
+
+        #nav_content {
+            padding: unset;
+        }
+    }
+
+    main {
+        margin-left: 50px;
+    }
+}
+
+/* /phone only */
+
+
 /* #endregion media query */

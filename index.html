@@ -19,43 +19,49 @@
 
     <nav id="nav_bar">
         <div id="nav_content">
-            <img src="./assets/img/logo.svg" alt="">
-            <div class="nav_buttons main_buttons">
-                <div><img src="./assets/img/home.svg" alt="Go to your spotify home page"> <span>Home</span></div>
-                <div><img src="./assets/img/search.svg" alt="Search for artists, songs, albums or even playlists">
-                    <span>Cerca</span>
-                </div>
-                <div><img src="./assets/img/libreria.svg" alt="Your library"> <span>La Tua Libreria</span></div>
+            <div class="mobile_only">
+                <img class="mobile_only" src="./assets/img/logo-small.svg" alt="">
+                <img src="./assets/img/home.svg" alt="">
+                <img src="./assets/img/search.svg" alt="">
+                <img src="./assets/img/libreria.svg" alt="">
             </div>
-            <div id="playlists">
-                <h3>PLAYLIST</h3>
-                <div id="create_playlist">
-                    <div id="create_playlist_button">
-                        <span>+</span>
+            <div class="no_mobile">
+                <img src="./assets/img/logo.svg" alt="">
+                <div class="nav_buttons main_buttons">
+                    <div><img src="./assets/img/home.svg" alt="Go to your spotify home page"> <span>Home</span></div>
+                    <div><img src="./assets/img/search.svg" alt="Search on Spotify"> <span>Cerca</span> </div>
+                    <div><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La Tua Libreria</span>
                     </div>
-                    <p>Crea Playlist</p>
                 </div>
-                <ul>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                    <li>Nome Playlist</li>
-                </ul>
+                <div id="playlists">
+                    <h4>PLAYLIST</h4>
+                    <div id="create_playlist">
+                        <div id="create_playlist_button">
+                            <span>+</span>
+                        </div>
+                        <p>Crea Playlist</p>
+                    </div>
+                    <ul>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                        <li>Nome Playlist</li>
+                    </ul>
+                </div>
             </div>
-            <div id="nav_bottom">
+            <div id="nav_bottom" class="no_mobile">
                 <div class="nav_buttons">
                     <div>
                         <img id="download_icon" src="./assets/img/download.svg" alt=""> <span>Installa app</span>
                     </div>
-
                 </div>
-                <hr>
+                <hr id="nav_bottom_hr">
                 <div class="nav_buttons">
                     <div><img id="user_icon" src="./assets/img/profile.svg" alt="">
-                        <h2>John Doe</h2>
+                        <h3>John Doe</h3>
                     </div>
                 </div>
 
@@ -69,24 +75,90 @@
         </div>
 
         <div id="music">
-            <div>
-                <ul class="horizontal_list">
-                    <li>IN EVIDENZA</li>
-                    <li>PODCAST</li>
-                    <li>CLASSIFICHE</li>
-                    <li>GENERI E MOOD</li>
-                    <li>NUOVE USCITE</li>
-                    <li>SCOPRI</li>
-                </ul>
+            <ul class="fyp_section horizontal_list">
+                <li>IN EVIDENZA</li>
+                <li>PODCAST</li>
+                <li>CLASSIFICHE</li>
+                <li>GENERI E MOOD</li>
+                <li>NUOVE USCITE</li>
+                <li>SCOPRI</li>
+            </ul>
+            <div class="fyp_section">
+                <h1>Recently played</h1>
+                <div class="music_row">
+                    <section class="music_col">
+                        <img src="./assets/img/metal_lifting.jpg" alt="">
+                        <h2>Heavy Metal</h2>
+                        <p>Subtitle</p>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/stranger.jpeg" alt="">
+                        <h2>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
+                        <p>Kyle Dixon & Michael Stein</p>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/aquietplace.jpeg" alt="">
+                        <h2>A quiet place</h2>
+                        <p>Subtitle</p>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/split.jpeg" alt="">
+                        <h2>Split</h2>
+                        <p>Subtitle</p>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/cure.jpeg" alt="">
+                        <h2>A Cure for Wellness</h2>
+                        <p>Subtitle</p>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/sinister.jpeg" alt="">
+                        <h2>Sinister</h2>
+                        <p>Subtitle</p>
+                    </section>
+                </div>
             </div>
-            <div id="fyp">
-                <h1>lorem*100</h1>
+            <!-- /recently played -->
+            <div class="fyp_section">
+                <h1>Creato per John Doe</h1>
+                <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
+                <div class="music_row">
+                    <section class="music_col">
+                        <img src="./assets/img/radar.jpeg" alt="">
+                        <h2>Release Radar</h2>
+                    </section>
+                    <section class="music_col">
+                        <img src="./assets/img/mixdaily.jpeg" alt="">
+                        <h2>Daily Mix 1</h2>
+                    </section>
+                </div>
             </div>
+            <!-- /created for you -->
+            <div class="fyp_section">
+                <h1>Artisti pi&ugrave; popolari</h1>
+                <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
+                <div class="music_row">
+                    <section class="music_col">
+                        <img class="artist_portrait" src="./assets/img/youg.jpeg" alt="">
+                        <h2>Lana Del Rey</h2>
+                    </section>
+                    <section class="music_col">
+                        <img class="artist_portrait" src="./assets/img/einaudi.jpeg" alt="">
+                        <h2>Ludovico Einaudi</h2>
+                    </section>
+                </div>
+            </div>
+            <!-- /popular artists -->
         </div>
     </main>
     <!-- /main -->
 
     <footer>
+        <div id="music_player_align">
+            <div id="current_track">aa</div>
+            <div id="music_player">bb</div>
+            <div id="audio_controls">cc</div>
+        </div>
 
     </footer>
     <!-- /footer -->
