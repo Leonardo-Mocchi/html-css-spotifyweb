@@ -16,12 +16,10 @@
     --spotify-text-light: #ffffff;
     --spotify-text-soft-light: #a3a3a3;
     --sporify-highlight: #79b229;
+    --spotify-user-bg: #808080;
 }
 
 #debug {
-    main {
-        height: 200vh;
-    }
 
     .col_2 {
         width: calc(100% / 2 -1rem);
@@ -33,11 +31,6 @@
 /* #region utilities */
 
 /* layout */
-
-#nav_content {
-    margin: 20px;
-    margin-bottom: 7px;
-}
 
 #music {
     margin: 22px 35px 22px 20px;
@@ -59,8 +52,14 @@
 
 /* text format */
 
+h1 {
+    color: var(--spotify-text-light);
+}
+
 h2 {
     color: var(--spotify-text-light);
+    font-size: 14px;
+    font-weight: 700;
 }
 
 h3 {
@@ -93,27 +92,39 @@ ul {
     margin-right: 15px;
 }
 
-#nav_buttons {
-    margin-top: 30px;
+.nav_buttons {
     line-height: 24px;
 
-    li {
+    div {
         display: flex;
         height: 31px;
-
-        img {
-            height: 22px;
-            padding-right: 8px;
-            margin-top: 1px;
-        }
-
-        span {
-            text-align: right;
-            font-size: 13px;
-            font-weight: 500;
-        }
     }
 
+    img {
+        height: 22px;
+        width: 22px;
+        margin-right: 8px;
+    }
+
+    #download_icon {
+        width: 15px;
+        height: 23px;
+    }
+
+    #user_icon {
+        background-color: var(--spotify-user-bg);
+        padding: 1px 1.5px 2px 1.5px;
+        border-radius: 100%;
+    }
+
+    span {
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+
+.main_buttons {
+    margin-top: 30px;
 }
 
 #create_playlist_button {
@@ -136,24 +147,74 @@ ul {
 /* #endregion utilities */
 
 /* #region body */
-/* header {
-    z-index: 100;
-    background-color: var(--spotify-bg-header);
-    height: 90px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-} */
 
-/* /header */
+/* nav bar */
+
+#nav_bar {
+    z-index: 200;
+    background-color: var(--spotify-bg-navbar);
+    width: 230px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: calc(100% - 90px);
+    margin-bottom: 90px;
+    overflow-y: auto;
+}
+
+#nav_content {
+    height: calc(100vh - 90px);
+    padding: 20px;
+    padding-bottom: 7px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#playlists {
+    margin-top: 24px;
+
+    ul {
+        li {
+            margin-bottom: 14px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+    }
+}
+
+#create_playlist {
+    margin-top: 12px;
+    margin-bottom: 24px;
+    display: flex;
+
+    p {
+        margin-left: 10px;
+        align-self: center;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+#nav_bottom {
+    /* position: absolute;
+    bottom: 90px; */
+    justify-self: flex-end;
+
+    hr {
+        margin-bottom: 14px;
+        width: 190px;
+        border: 0.5px solid;
+    }
+}
+
+/* /nav bar */
 
 main {
-    padding: 0 0 90px 230px;
+    margin: 0 0 90px 230px;
     overflow-y: auto;
     background-color: var(--spotify-bg-main);
+    height: calc(100vh - 90px);
 
     #upgrade_section {
         background-color: var(--spotify-bg-header);
@@ -161,12 +222,13 @@ main {
         height: 90px;
         position: sticky;
         top: 0;
+        right: 0;
         display: flex;
         justify-content: end;
         align-items: center;
     }
 
-    #nav_bar {
+    /*  #nav_bar {
         z-index: 200;
         background-color: var(--spotify-bg-navbar);
         width: 230px;
@@ -175,6 +237,7 @@ main {
         top: 0;
         height: 100%;
         margin-bottom: 90px;
+        overflow-y: auto;
     }
 
     #playlists {
@@ -200,8 +263,16 @@ main {
             font-size: 14px;
             font-weight: 600;
         }
-
     }
+
+    #user {
+        img {
+            height: 22px;
+            background-color: var(--spotify-user-bg);
+            padding: 1px 1.5px 2px 1.5px;
+            border-radius: 100%;
+        }
+    } */
 }
 
 /* /main */
