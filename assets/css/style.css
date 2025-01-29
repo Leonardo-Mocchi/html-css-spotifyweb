@@ -16,8 +16,10 @@
     --spotify-bg-player: #282828;
     --spotify-text-light: #ffffff;
     --spotify-text-soft-light: #a3a3a3;
-    --sporify-highlight: #79b229;
+    --spotify-highlight: #79b229;
     --spotify-user-bg: #808080;
+    --spotify-slider-bg: #595959;
+    --spotify-slider: #c0c0c0;
 }
 
 /* #endregion common */
@@ -76,6 +78,60 @@
     }
 }
 
+#music_player_align {
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#current_track {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        height: 42px;
+    }
+
+    .far {
+        font-size: 16px;
+    }
+}
+
+.music_player_col {
+    width: 50%;
+}
+
+.music_player_smol_col {
+    width: calc(100% / 6);
+}
+
+#buttons_track_saveas {
+    .fa-regular {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+}
+
+#track_name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#fake_slider {
+    width: 70%;
+    display: flex;
+    align-items: center;
+}
+
+#player_buttons_layout {
+    width: 50%;
+
+}
+
 /* /layout */
 
 /* text format */
@@ -109,11 +165,18 @@ ul {
 }
 
 .highlight {
-    background-color: var(--sporify-highlight);
+    background-color: var(--spotify-highlight);
 }
 
 .highlight_text {
     color: var(--spotify-text-light);
+    font-weight: 700;
+}
+
+#music_player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* /text format */
@@ -179,7 +242,138 @@ ul {
     }
 }
 
+#buttons_track_saveas {
+    margin-left: 20px;
+}
+
+#music_player_controls {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 130px;
+
+    .fa-play {
+        border: 3px solid var(--spotify-text-light);
+        border-radius: 100%;
+        padding: 5px 7px;
+    }
+
+    .fa-solid {
+        font-size: 20px;
+        color: var(--spotify-text-light);
+    }
+
+    /* div {
+        i {
+            margin: 0 10px;
+        }
+    } */
+}
+
 /* /buttons */
+
+/* sliders */
+
+#length_bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    hr {
+        width: 80%;
+        border-radius: 50px;
+        height: 3px;
+        border-color: var(--spotify-text-soft-light);
+        background-color: var(--spotify-text-soft-light);
+    }
+
+    #playtime {
+        width: 20%;
+        border-color: var(--spotify-text-light);
+        background-color: var(--spotify-text-light);
+    }
+
+    p {
+        color: var(--spotify-text-light);
+        font-weight: 700;
+        font-size: 10px;
+    }
+}
+
+#fake_thumb_slider {
+    display: none;
+    padding: 6px 6.75px;
+    background-color: var(--spotify-text-light);
+    border-radius: 100%;
+}
+
+/* .slidecontainer {
+        width: 80%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        background-color: var(--spotify-highlight);
+        border-radius: 3rem;
+        width: 100%;
+        height: 4px;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: radio;
+        width: 13px;
+        height: 13px;
+        border-radius: 100%;
+        background: var(--spotify-text-light);
+        cursor: pointer;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: radio;
+        width: 13px;
+        height: 13px;
+        border-radius: 100%;
+        background: var(--spotify-text-light);
+        cursor: pointer;
+    } */
+
+/* /sliders */
+
+/* hover effects */
+
+#fake_slider:hover {
+    cursor: pointer;
+
+    #playtime {
+        background-color: var(--spotify-highlight);
+        border-color: var(--spotify-highlight);
+    }
+
+    #fake_thumb_slider {
+        display: unset;
+    }
+}
+
+#buttons_track_saveas {
+    i:hover {
+        color: var(--spotify-text-light);
+        cursor: pointer;
+    }
+}
+
+/* /hover effects */
 
 /* #endregion utilities */
 
@@ -267,9 +461,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-
-
 }
+
 
 /* /footer */
 

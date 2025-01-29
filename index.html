@@ -155,11 +155,52 @@
 
     <footer>
         <div id="music_player_align">
-            <div id="current_track">aa</div>
-            <div id="music_player">bb</div>
-            <div id="audio_controls">cc</div>
-        </div>
+            <div id="current_track" class="music_player_smol_col">
+                <div id="track_name">
+                    <img src="./assets/img/sinister.jpeg" alt="">
+                    <div>
+                        <div class="highlight_text">Sinister</div>
+                        Brano Nome
+                    </div>
+                </div>
+                <div id="buttons_track_saveas">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
 
+            </div>
+            <!-- /music player's left side -->
+            <div id="music_player" class="music_player_col">
+                <div id="player_buttons_layout">
+                    <div id="music_player_controls">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-backward-step"></i>
+                        <div><i class="fa-solid fa-play"></i> </div>
+                        <i class="fa-solid fa-forward-step"></i>
+                        <i class="fa-solid fa-arrow-rotate-right"></i>
+                    </div>
+                </div>
+                <div id="length_bar">
+                    <p>0:25</p>
+                    <!-- <div class="slidecontainer">
+                        <input style="accent-color: #ffffff" type="range" min="1" max="100" value="20" class="slider" id="myRange">
+                    </div> -->
+                    <div id="fake_slider">
+                        <hr id="playtime">
+                        <div id="fake_thumb_slider"></div>
+                        <hr>
+                    </div>
+                    <p>4:35</p>
+                </div>
+            </div>
+            <!-- /music player's center -->
+            <div id="audio_controls" class="music_player_smol_col">
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+            </div>
+            <!-- /music player's right side -->
+        </div>
     </footer>
     <!-- /footer -->
 
