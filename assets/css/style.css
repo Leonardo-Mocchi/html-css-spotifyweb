@@ -9,6 +9,10 @@
     transition: all .5s ease-out;
 }
 
+*:hover {
+    cursor: default;
+}
+
 :root {
     --spotify-bg-header: #080b12;
     --spotify-bg-navbar: #000000;
@@ -20,6 +24,10 @@
     --spotify-user-bg: #808080;
     --spotify-slider-bg: #595959;
     --spotify-slider: #c0c0c0;
+}
+
+body {
+    background-color: var(--spotify-bg-main);
 }
 
 /* #endregion common */
@@ -287,7 +295,7 @@ ul {
 }
 
 .fake_music_slider {
-    width: 70%;
+    width: 85%;
     display: flex;
     align-items: center;
 }
@@ -360,6 +368,10 @@ ul {
 .fake_music_slider:hover {
     cursor: pointer;
 
+    * {
+        cursor: pointer;
+    }
+
     .fake_slider_active {
         transition: none;
         background-color: var(--spotify-highlight);
@@ -398,6 +410,8 @@ ul {
 }
 
 .horizontal_list {
+    cursor: pointer;
+
     li:hover {
         color: var(--spotify-text-light);
         cursor: pointer;
@@ -408,6 +422,7 @@ ul {
         opacity: 0.8;
     }
 }
+
 
 .upgrade:hover {
     cursor: pointer;
@@ -421,6 +436,10 @@ ul {
 
 .nav_btn:hover {
     cursor: pointer;
+
+    * {
+        cursor: pointer;
+    }
 
     img {
         height: 30px;
@@ -453,6 +472,10 @@ ul {
 .mobile_only {
     cursor: pointer;
 
+    * {
+        cursor: pointer;
+    }
+
     img:hover {
         height: 42px;
         width: 42px;
@@ -465,10 +488,12 @@ ul {
     }
 }
 
-
-
 #create_playlist:hover {
     cursor: pointer;
+
+    * {
+        cursor: pointer;
+    }
 
     p {
         color: var(--spotify-text-light);
@@ -498,10 +523,11 @@ ul {
 }
 
 #playlists {
+
     ul {
-        cursor: pointer;
 
         li:hover {
+            cursor: pointer;
             color: var(--spotify-text-light);
             font-size: 14px;
         }
@@ -526,18 +552,21 @@ ul {
 #nav_bar {
     background-color: var(--spotify-bg-navbar);
     width: 230px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    height: calc(100% - 90px);
-    overflow-y: auto;
+    height: 100%;
+    overflow-y: hidden;
+
+    * {
+        overflow-y: hidden;
+    }
 }
 
 #nav_content {
-    height: calc(100vh - 90px);
+    height: calc(100% - 90px);
     padding: 20px;
     padding-bottom: 7px;
-    overflow-y: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -547,6 +576,9 @@ ul {
     margin-top: 24px;
 
     ul {
+        overflow-y: scroll;
+        background-color: #d8faa7;
+
         li {
             margin-bottom: 14px;
             font-size: 13px;
@@ -568,13 +600,17 @@ ul {
     }
 }
 
+#nav_bottom {
+    flex-shrink: 100;
+}
+
 /* /nav bar */
 
 main {
     margin: 0 0 90px 230px;
-    overflow-y: auto;
     background-color: var(--spotify-bg-main);
-    height: calc(100vh - 90px);
+    height: calc(100% - 90px);
+    overflow-y: auto;
 
     #upgrade_section {
         background-color: var(--spotify-bg-header);
