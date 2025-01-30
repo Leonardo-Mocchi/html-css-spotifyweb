@@ -16,204 +16,213 @@
 </head>
 
 <body id="debug"> <!--  -->
-
-    <nav id="nav_bar">
-        <div id="nav_content">
-            <div class="mobile_only">
-                <img src="./assets/img/logo-small.svg" alt="">
-                <img src="./assets/img/home.svg" alt="">
-                <img src="./assets/img/search.svg" alt="">
-                <img src="./assets/img/libreria.svg" alt="">
-            </div>
-            <div class="no_mobile">
-                <img src="./assets/img/logo.svg" alt="">
-                <div class="nav_buttons main_buttons">
-                    <div class="nav_btn"><img src="./assets/img/home.svg" alt="Go to your spotify home page">
-                        <span>Home</span>
+    <div id="flex_music_player">
+        <div id="flex_main">
+            <nav id="nav_bar">
+                <div id="nav_content">
+                    <div class="mobile_only">
+                        <img src="./assets/img/logo-small.svg" alt="">
+                        <img src="./assets/img/home.svg" alt="">
+                        <img src="./assets/img/search.svg" alt="">
+                        <img src="./assets/img/libreria.svg" alt="">
                     </div>
-                    <div class="nav_btn"><img src="./assets/img/search.svg" alt="Search on Spotify"> <span>Cerca</span>
-                    </div>
-                    <div class="nav_btn"><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La Tua
-                            Libreria</span>
-                    </div>
-                </div>
-                <div id="playlists">
-                    <h4>PLAYLIST</h4>
-                    <div id="create_playlist">
-                        <div id="create_playlist_button">
-                            <span>+</span>
+                    <div class="no_mobile">
+                        <img src="./assets/img/logo.svg" alt="">
+                        <div class="nav_buttons main_buttons">
+                            <div class="nav_btn"><img src="./assets/img/home.svg" alt="Go to your spotify home page">
+                                <span>Home</span>
+                            </div>
+                            <div class="nav_btn"><img src="./assets/img/search.svg" alt="Search on Spotify">
+                                <span>Cerca</span>
+                            </div>
+                            <div class="nav_btn"><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La
+                                    Tua
+                                    Libreria</span>
+                            </div>
                         </div>
-                        <p>Crea Playlist</p>
+                        <div id="playlists">
+                            <h4>PLAYLIST</h4>
+                            <div id="create_playlist">
+                                <div id="create_playlist_button">
+                                    <span>+</span>
+                                </div>
+                                <p>Crea Playlist</p>
+                            </div>
+                            <ul>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                                <li>Nome Playlist</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                        <li>Nome Playlist</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="nav_bottom" class="no_mobile">
-                <div class="nav_buttons">
-                    <div class="nav_btn">
-                        <img id="download_icon" src="./assets/img/download.svg" alt=""> <span>Installa app</span>
+                    <div id="nav_bottom" class="no_mobile">
+                        <div class="nav_buttons">
+                            <div class="nav_btn">
+                                <img id="download_icon" src="./assets/img/download.svg" alt=""> <span>Installa
+                                    app</span>
+                            </div>
+                        </div>
+                        <hr id="nav_bottom_hr">
+                        <div class="nav_buttons">
+                            <div class="nav_btn"><img id="user_icon" src="./assets/img/profile.svg" alt="">
+                                <h3>John Doe</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <hr id="nav_bottom_hr">
-                <div class="nav_buttons">
-                    <div class="nav_btn"><img id="user_icon" src="./assets/img/profile.svg" alt="">
-                        <h3>John Doe</h3>
+            </nav>
+            <!-- /nav bar -->
+            <main>
+                <div id="flex_music">
+                    <div id="upgrade_section">
+                        <div class="upgrade">EFFETTUA L'UPGRADE</div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <div id="upgrade_section">
-            <div class="upgrade">EFFETTUA L'UPGRADE</div>
+                    <div id="music">
+                        <ul class="fyp_section horizontal_list">
+                            <li>IN EVIDENZA</li>
+                            <li>PODCAST</li>
+                            <li>CLASSIFICHE</li>
+                            <li>GENERI E MOOD</li>
+                            <li>NUOVE USCITE</li>
+                            <li>SCOPRI</li>
+                        </ul>
+                        <div class="fyp_section">
+                            <h1>Recently played</h1>
+                            <div class="music_row">
+                                <section class="music_col">
+                                    <img src="./assets/img/metal_lifting.jpg" alt="">
+                                    <h2>Heavy Metal</h2>
+                                    <p>Subtitle</p>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/stranger.jpeg" alt="">
+                                    <h2>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
+                                    <p>Kyle Dixon & Michael Stein</p>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/aquietplace.jpeg" alt="">
+                                    <h2>A quiet place</h2>
+                                    <p>Subtitle</p>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/split.jpeg" alt="">
+                                    <h2>Split</h2>
+                                    <p>Subtitle</p>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/cure.jpeg" alt="">
+                                    <h2>A Cure for Wellness</h2>
+                                    <p>Subtitle</p>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/sinister.jpeg" alt="">
+                                    <h2>Sinister</h2>
+                                    <p>Subtitle</p>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- /recently played -->
+                        <div class="fyp_section">
+                            <h1>Creato per John Doe</h1>
+                            <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
+                            <div class="music_row">
+                                <section class="music_col">
+                                    <img src="./assets/img/radar.jpeg" alt="">
+                                    <h2>Release Radar</h2>
+                                </section>
+                                <section class="music_col">
+                                    <img src="./assets/img/mixdaily.jpeg" alt="">
+                                    <h2>Daily Mix 1</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- /created for you -->
+                        <div class="fyp_section">
+                            <h1>Artisti pi&ugrave; popolari</h1>
+                            <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
+                            <div class="music_row">
+                                <section class="music_col">
+                                    <img class="artist_portrait" src="./assets/img/youg.jpeg" alt="">
+                                    <h2>Lana Del Rey</h2>
+                                </section>
+                                <section class="music_col">
+                                    <img class="artist_portrait" src="./assets/img/einaudi.jpeg" alt="">
+                                    <h2>Ludovico Einaudi</h2>
+                                </section>
+                            </div>
+                        </div>
+                        <!-- /popular artists -->
+                    </div>
+                </div>
+            </main>
+            <!-- /main -->
         </div>
 
-        <div id="music">
-            <ul class="fyp_section horizontal_list">
-                <li>IN EVIDENZA</li>
-                <li>PODCAST</li>
-                <li>CLASSIFICHE</li>
-                <li>GENERI E MOOD</li>
-                <li>NUOVE USCITE</li>
-                <li>SCOPRI</li>
-            </ul>
-            <div class="fyp_section">
-                <h1>Recently played</h1>
-                <div class="music_row">
-                    <section class="music_col">
-                        <img src="./assets/img/metal_lifting.jpg" alt="">
-                        <h2>Heavy Metal</h2>
-                        <p>Subtitle</p>
-                    </section>
-                    <section class="music_col">
-                        <img src="./assets/img/stranger.jpeg" alt="">
-                        <h2>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h2>
-                        <p>Kyle Dixon & Michael Stein</p>
-                    </section>
-                    <section class="music_col">
-                        <img src="./assets/img/aquietplace.jpeg" alt="">
-                        <h2>A quiet place</h2>
-                        <p>Subtitle</p>
-                    </section>
-                    <section class="music_col">
-                        <img src="./assets/img/split.jpeg" alt="">
-                        <h2>Split</h2>
-                        <p>Subtitle</p>
-                    </section>
-                    <section class="music_col">
-                        <img src="./assets/img/cure.jpeg" alt="">
-                        <h2>A Cure for Wellness</h2>
-                        <p>Subtitle</p>
-                    </section>
-                    <section class="music_col">
+        <footer>
+            <div id="music_player_align">
+                <div id="current_track" class="music_player_smol_col">
+                    <div id="track_name">
                         <img src="./assets/img/sinister.jpeg" alt="">
-                        <h2>Sinister</h2>
-                        <p>Subtitle</p>
-                    </section>
-                </div>
-            </div>
-            <!-- /recently played -->
-            <div class="fyp_section">
-                <h1>Creato per John Doe</h1>
-                <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
-                <div class="music_row">
-                    <section class="music_col">
-                        <img src="./assets/img/radar.jpeg" alt="">
-                        <h2>Release Radar</h2>
-                    </section>
-                    <section class="music_col">
-                        <img src="./assets/img/mixdaily.jpeg" alt="">
-                        <h2>Daily Mix 1</h2>
-                    </section>
-                </div>
-            </div>
-            <!-- /created for you -->
-            <div class="fyp_section">
-                <h1>Artisti pi&ugrave; popolari</h1>
-                <p>Pi&ugrave; ascolti, pi&ugrave; accurati saranno i tuoi suggerimenti.</p>
-                <div class="music_row">
-                    <section class="music_col">
-                        <img class="artist_portrait" src="./assets/img/youg.jpeg" alt="">
-                        <h2>Lana Del Rey</h2>
-                    </section>
-                    <section class="music_col">
-                        <img class="artist_portrait" src="./assets/img/einaudi.jpeg" alt="">
-                        <h2>Ludovico Einaudi</h2>
-                    </section>
-                </div>
-            </div>
-            <!-- /popular artists -->
-        </div>
-    </main>
-    <!-- /main -->
+                        <div>
+                            <div class="highlight_text">Sinister</div>
+                            Brano Nome
+                        </div>
+                    </div>
+                    <div id="buttons_track_saveas">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-folder"></i>
+                    </div>
 
-    <footer>
-        <div id="music_player_align">
-            <div id="current_track" class="music_player_smol_col">
-                <div id="track_name">
-                    <img src="./assets/img/sinister.jpeg" alt="">
-                    <div>
-                        <div class="highlight_text">Sinister</div>
-                        Brano Nome
+                </div>
+                <!-- /music player's left side -->
+                <div id="music_player" class="music_player_col">
+                    <div id="player_buttons_layout">
+                        <div id="music_player_controls">
+                            <i class="fa-solid fa-shuffle"></i>
+                            <i class="fa-solid fa-backward-step"></i>
+                            <div><i class="fa-solid fa-play"></i> </div>
+                            <i class="fa-solid fa-forward-step"></i>
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </div>
+                    </div>
+                    <div class="length_bar">
+                        <p>0:25</p>
+                        <!-- <div class="slidecontainer">
+                            <input style="accent-color: #ffffff" type="range" min="1" max="100" value="20" class="slider" id="myRange">
+                        </div> -->
+                        <div class="fake_music_slider">
+                            <hr class="fake_slider_active fake_slider_measures">
+                            <div class="fake_thumb_slider"></div>
+                            <hr class="fake_slider_measures">
+                        </div>
+                        <p>4:35</p>
                     </div>
                 </div>
-                <div id="buttons_track_saveas">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-folder"></i>
-                </div>
+                <!-- /music player's center -->
+                <div id="audio_controls" class="music_player_smol_col">
+                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div id="audio_bar"> <!-- class="length_bar" -->
+                        <div class="fake_music_slider">
+                            <hr class="fake_slider_active fake_slider_measures">
+                            <div class="fake_thumb_slider"></div>
+                            <hr class="fake_slider_measures">
+                        </div>
+                    </div>
 
+                </div>
+                <!-- /music player's right side -->
             </div>
-            <!-- /music player's left side -->
-            <div id="music_player" class="music_player_col">
-                <div id="player_buttons_layout">
-                    <div id="music_player_controls">
-                        <i class="fa-solid fa-shuffle"></i>
-                        <i class="fa-solid fa-backward-step"></i>
-                        <div><i class="fa-solid fa-play"></i> </div>
-                        <i class="fa-solid fa-forward-step"></i>
-                        <i class="fa-solid fa-arrow-rotate-right"></i>
-                    </div>
-                </div>
-                <div class="length_bar">
-                    <p>0:25</p>
-                    <!-- <div class="slidecontainer">
-                        <input style="accent-color: #ffffff" type="range" min="1" max="100" value="20" class="slider" id="myRange">
-                    </div> -->
-                    <div class="fake_music_slider">
-                        <hr class="fake_slider_active fake_slider_measures">
-                        <div class="fake_thumb_slider"></div>
-                        <hr class="fake_slider_measures">
-                    </div>
-                    <p>4:35</p>
-                </div>
-            </div>
-            <!-- /music player's center -->
-            <div id="audio_controls" class="music_player_smol_col">
-                <i class="fa-solid fa-list"></i>
-                <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-volume-high"></i>
-                <div id="audio_bar"> <!-- class="length_bar" -->
-                    <div class="fake_music_slider">
-                        <hr class="fake_slider_active fake_slider_measures">
-                        <div class="fake_thumb_slider"></div>
-                        <hr class="fake_slider_measures">
-                    </div>
-                </div>
+        </footer>
+        <!-- /footer -->
+    </div>
 
-            </div>
-            <!-- /music player's right side -->
-        </div>
-    </footer>
-    <!-- /footer -->
 
 </body>
 

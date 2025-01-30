@@ -38,6 +38,31 @@ body {
 
 /* layout */
 
+#flex_music_player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#flex_main {
+    display: flex;
+}
+
+#flex_music {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav_bottom_hr {
+    margin-bottom: 14px;
+    border: 0.5px solid;
+}
+
+#music {
+    margin-left: 22px;
+    margin-right: 35px;
+}
+
 .music_row {
     display: flex;
     gap: 1rem;
@@ -50,9 +75,12 @@ body {
     }
 }
 
-#music {
-    margin-left: 22px;
-    margin-right: 35px;
+.music_col {
+    width: calc(-1rem + 100% / 6);
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .fyp_section {
@@ -70,19 +98,6 @@ body {
     li {
         padding: 0px 12px;
         line-height: 36px;
-    }
-}
-
-#nav_bottom_hr {
-    margin-bottom: 14px;
-    border: 0.5px solid;
-}
-
-.music_col {
-    width: calc(-1rem + 100% / 6);
-
-    img {
-        max-width: 100%;
     }
 }
 
@@ -144,6 +159,10 @@ body {
 
 /* text format */
 
+ul {
+    list-style-type: none;
+}
+
 h1 {
     color: var(--spotify-text-light);
     font-size: 24px;
@@ -166,14 +185,6 @@ h4 {
     color: var(--spotify-text-light);
     font-weight: 600;
     font-size: 13.5px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.highlight {
-    background-color: var(--spotify-highlight);
 }
 
 .highlight_text {
@@ -264,7 +275,7 @@ ul {
     .fa-play {
         border: 3px solid var(--spotify-text-light);
         border-radius: 100%;
-        padding: 5px 7px;
+        padding: 6px 6px 4.5px 9px;
     }
 
     .fa-solid {
@@ -381,6 +392,18 @@ ul {
     .fake_thumb_slider {
         display: unset;
     }
+
+}
+
+.fake_music_slider:active {
+    .fake_slider_measures {
+        opacity: 0.8;
+    }
+}
+
+.fake_thumb_slider:active {
+    background-color: var(--spotify-text-soft-light);
+    box-shadow: 0 0 1px 1px var(--spotify-highlight);
 }
 
 #buttons_track_saveas,
@@ -552,19 +575,17 @@ ul {
 #nav_bar {
     background-color: var(--spotify-bg-navbar);
     width: 230px;
-    position: fixed;
+    flex-shrink: 0;
+    /* position: fixed;
     left: 0;
-    top: 0;
-    height: 100%;
+    top: 0; */
+    height: calc(100vh - 90px);
     overflow-y: hidden;
 
-    * {
-        overflow-y: hidden;
-    }
 }
 
 #nav_content {
-    height: calc(100% - 90px);
+    height: calc(100vh - 90px);
     padding: 20px;
     padding-bottom: 7px;
     display: flex;
@@ -576,6 +597,9 @@ ul {
     margin-top: 24px;
 
     ul {
+        /* DA SISTEMARE */
+        height: 28vh;
+        min-height: 10px;
         overflow-y: scroll;
         background-color: #d8faa7;
 
@@ -606,17 +630,24 @@ ul {
 
 /* /nav bar */
 
+
+
+
 main {
-    margin: 0 0 90px 230px;
+    width: calc(100vh - 230px);
+    /* padding: 0 0 90px 230px; */
     background-color: var(--spotify-bg-main);
-    height: calc(100% - 90px);
+    height: calc(100vh - 90px);
     overflow-y: auto;
+    flex-grow: 1;
+
 
     #upgrade_section {
         background-color: var(--spotify-bg-header);
         opacity: 0.75;
         height: 90px;
         position: sticky;
+        width: 100%;
         top: 0;
         right: 0;
         display: flex;
@@ -633,13 +664,13 @@ main {
 /* /main */
 
 footer {
+    transition: none;
     background-color: var(--spotify-bg-player);
     height: 90px;
-    position: fixed;
-    bottom: 0;
+    /* position: sticky;
+    bottom: 0; */
     width: 100%;
 }
-
 
 /* /footer */
 
@@ -699,6 +730,8 @@ footer {
 
     #nav_bar {
         width: 50px;
+        flex-shrink: 0;
+
 
         #nav_content {
             padding: unset;
@@ -706,7 +739,8 @@ footer {
     }
 
     main {
-        margin-left: 50px;
+        transition: none;
+        width: calc(100vh - 50px);
     }
 
     /*  #audio_bar {
