@@ -94,10 +94,19 @@ body {
     justify-content: center;
     text-wrap: nowrap;
     margin-top: 22px;
+    gap: 12px;
 
     li {
-        padding: 0px 12px;
         line-height: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            text-align: center;
+            width: 40px;
+            border-bottom: 3px solid var(--spotify-bg-main);
+        }
     }
 }
 
@@ -272,14 +281,13 @@ h4 {
     align-items: center;
     min-width: 130px;
 
-    .fa-play {
-        border: 3px solid var(--spotify-text-light);
-        border-radius: 100%;
-        padding: 6px 6px 4.5px 9px;
-    }
-
     .fa-solid {
         font-size: 20px;
+        color: var(--spotify-text-light);
+    }
+
+    .fa-regular {
+        font-size: 28px;
         color: var(--spotify-text-light);
     }
 }
@@ -438,11 +446,20 @@ h4 {
     li:hover {
         color: var(--spotify-text-light);
         cursor: pointer;
+
+        div {
+            border-bottom: 3px solid var(--spotify-highlight);
+        }
     }
 
     li:active {
         transition: none;
         opacity: 0.8;
+
+        div {
+            transition: none;
+            border-bottom: 3px solid var(--spotify-text-light);
+        }
     }
 }
 
@@ -546,9 +563,7 @@ h4 {
 }
 
 #playlists {
-
     ul {
-
         li:hover {
             cursor: pointer;
             color: var(--spotify-text-light);
@@ -561,6 +576,80 @@ h4 {
         }
     }
 }
+
+.music_col {
+
+    p,
+    .hover_underline_title {
+        border-bottom: 3px solid rgba(0, 0, 0, 0);
+        padding-bottom: ;
+    }
+}
+
+.music_col:hover {
+
+    p,
+    .hover_underline_title {
+        border-bottom: 3px solid var(--spotify-highlight);
+    }
+
+    .music_hover_effects {
+        cursor: pointer;
+        position: relative;
+
+        * {
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: unset;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2d2d32aa;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                color: var(--spotify-text-light);
+                font-size: 48px;
+                text-align: left;
+            }
+        }
+
+        .artist_overlay {
+            border-radius: 100%;
+        }
+    }
+}
+
+.music_col:active {
+    transition: none;
+
+    * {
+        transition: none;
+    }
+
+    p,
+    .hover_underline_title {
+        border-bottom: 3px solid var(--spotify-text-light);
+
+    }
+
+    .music_hover_effects:active {
+        .overlay {
+            background-color: #2d2d3267;
+
+            i {
+                font-size: 46px;
+            }
+        }
+    }
+}
+
 
 /* /hover effects */
 
@@ -576,12 +665,8 @@ h4 {
     background-color: var(--spotify-bg-navbar);
     width: 230px;
     flex-shrink: 0;
-    /* position: fixed;
-    left: 0;
-    top: 0; */
     height: calc(100vh - 90px);
     overflow-y: hidden;
-
 }
 
 #nav_content {
@@ -597,11 +682,9 @@ h4 {
     margin-top: 24px;
 
     ul {
-        /* DA SISTEMARE */
-        height: 28vh;
+        max-height: 28vh;
         min-height: 10px;
-        overflow-y: scroll;
-        background-color: #d8faa7;
+        overflow-y: auto;
 
         li {
             margin-bottom: 14px;
@@ -630,9 +713,6 @@ h4 {
 
 /* /nav bar */
 
-
-
-
 main {
     width: calc(100vh - 230px);
     /* padding: 0 0 90px 230px; */
@@ -658,6 +738,10 @@ main {
 
     .artist_portrait {
         border-radius: 100%;
+    }
+
+    .overlay {
+        display: none;
     }
 }
 
@@ -730,7 +814,6 @@ footer {
 
     #nav_bar {
         width: 50px;
-        flex-shrink: 0;
 
 
         #nav_content {
