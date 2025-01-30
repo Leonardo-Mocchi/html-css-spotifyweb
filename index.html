@@ -21,21 +21,36 @@
             <nav id="nav_bar">
                 <div id="nav_content">
                     <div class="mobile_only">
-                        <img src="./assets/img/logo-small.svg" alt="">
-                        <img src="./assets/img/home.svg" alt="">
-                        <img src="./assets/img/search.svg" alt="">
-                        <img src="./assets/img/libreria.svg" alt="">
+                        <img id="small_logo" src="./assets/img/logo-small.svg" alt="">
+                        <div class="mobile_logo_container">
+                            <div class="mobile_highlight"></div><img src="./assets/img/home.svg" alt="">
+                            <div></div>
+                        </div>
+                        <div class="mobile_logo_container">
+                            <div class="mobile_highlight"></div> <img src="./assets/img/search.svg" alt="">
+                            <div></div>
+                        </div>
+                        <div class="mobile_logo_container">
+                            <div class="mobile_highlight"></div> <img src="./assets/img/libreria.svg" alt="">
+                            <div></div>
+                        </div>
+
                     </div>
                     <div class="no_mobile">
-                        <img src="./assets/img/logo.svg" alt="">
+                        <img id="full_logo" src="./assets/img/logo.svg" alt="">
                         <div class="nav_buttons main_buttons">
-                            <div class="nav_btn"><img src="./assets/img/home.svg" alt="Go to your spotify home page">
+                            <div class="nav_btn">
+                                <div id="home"></div> <img src="./assets/img/home.svg"
+                                    alt="Go to your spotify home page">
                                 <span>Home</span>
                             </div>
-                            <div class="nav_btn"><img src="./assets/img/search.svg" alt="Search on Spotify">
+                            <div class="nav_btn">
+                                <div id="search"></div> <img src="./assets/img/search.svg" alt="Search on Spotify">
                                 <span>Cerca</span>
                             </div>
-                            <div class="nav_btn"><img src="./assets/img/libreria.svg" alt="Go to your library"> <span>La
+                            <div class="nav_btn">
+                                <div id="library"></div> <img src="./assets/img/libreria.svg" alt="Go to your library">
+                                <span>La
                                     Tua Libreria</span>
                             </div>
                         </div>
