@@ -25,4 +25,6 @@ A responsive web clone of the Spotify interface built with HTML and CSS.
 
 ---
 
-*Educational project - not connected to Spotify services*
+## ⚠️ Disclaimer
+
+Educational project - not connected to Spotify services
